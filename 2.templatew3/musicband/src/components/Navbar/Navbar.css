@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    color: white;
+    padding: 0 20px;
+}
+.nav-left {
+    flex: 1;
+}
+.nav-left .navbar-menu{
+    height: 39px;
+    overflow-y: hidden;
+}
+.nav-left .navbar-menu.active-menu {
+    height: fit-content;
+    /* overflow-y: hidden; */
+}
+.nav-left .navbar-menu li,  .navbar-right i
+ {
+    padding: 10px 0;
+    
+}
+
+.nav-left .navbar-menu li.menu-dropdown{
+    /* display: flex; */
+    display: none;
+    column-gap: 10px;
+    position: relative;
+}
+/* Extra small: < 640px (mặc định) sm: Small: ≥ 640px md: Medium: ≥ 768px lg: Large: ≥ 1024px xl: Extra large: ≥ 1280px 2xl: Extra-extra large: ≥ 1536px */
+.menu-item.active {
+    background-color: none;
+}
+
+@media screen and (min-width: 640px ) {
+    .nav-left .navbar-menu {
+        display: flex;
+        align-items: center;
+        column-gap: 3vw;
+       
+    }
+
+    /* .nav-left .navbar-menu li:not(:first-child) {
+        padding-top: 0;
+    } */
+    .navbar-right i {
+        font-size: 20px;
+    }
+    .nav-left .navbar-menu li,
+    .navbar-right i
+    {
+        padding: 10px 0 !important;
+    }
+    .nav-left .navbar-menu li.menu-dropdown {
+        display: flex;
+    
+    }
+    .hide-mobile {
+        display: none;
+    }
+ 
+    .dropdown-content {
+        position: absolute;
+        display: none;
+        background-color: rgb(202, 191, 191);
+        color: rgb(24, 22, 22);
+        top: 40px;
+        padding-right: 10px;
+    }
+    .dropdown-content.showdrop {
+        display: block;
+    }
+    .menu-item.active {
+        background-color: none;
+    }
+}
